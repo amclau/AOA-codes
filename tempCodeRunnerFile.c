@@ -81,20 +81,11 @@
 #include<stdlib.h>
 #include<time.h>
 
-
-
 int arr[100];
-void main()
+void sort()
 {
-clock_t start,stop;
-clock_t start_b,stop_b;
-clock_t start_w,stop_w;
-
-    // ////////insertion sort
     
-    
-    start=clock();
-    for(int i=0;i<100;i++)
+for(int i=0;i<100;i++)
     {
         arr[i]=rand();
     }
@@ -110,6 +101,19 @@ clock_t start_w,stop_w;
         }
         arr[j + 1] = key;
     }
+}
+
+void main()
+{
+clock_t start,stop;
+clock_t start_b,stop_b;
+clock_t start_w,stop_w;
+
+    // ////////insertion sort
+    
+    
+    start=clock();
+    sort();
 
     stop=clock();
     float res=stop-start;

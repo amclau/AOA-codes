@@ -8,19 +8,21 @@ int calculate(int initialDelay[12][4],int h)
        for (int i = 0; i < 4; i++)
        {
         resmat[i]=initialDelay[h][i]+bMat[i];
-        printf("code return   %d sum is ",resmat[i]);
+        // printf("code return   %d sum is ",resmat[i]);
        }
        int minindex=100000;
     int min = resmat[0];    
         
-    // //Loop through the array    
-    // for (int i = 0; i < 4; i++) {     
-    //     //Compare elements of array with min    
-    //    if(resmat[i] < min)    
-    //        min = i;    
-    // }      
-    // // printf("Smallest element present in given array: %d\n", min);    
-    // return resmat[min];    
+    //Loop through the array    
+    for (int i = 0; i < 4; i++) {     
+        //Compare elements of array with min    
+       if(resmat[i] < min)    
+       {
+           min = i; 
+       }   
+    }      
+    // printf("Smallest element present in given array: %d\n", min);    
+    return resmat[min];    
 
        
 }
@@ -47,7 +49,7 @@ int main()
     for (int i = 0; i < 12; i++)
     {
        int res=calculate(initialDelay,i);
-       printf("\n");
+       printf("\n %d",res);
     }
     
 
